@@ -43,7 +43,7 @@ class PyTest(testcommand):
 
 setup(
     name='python-consul2-hh',
-    version=metadata['version'],
+    version='14.88.0',
     author='yan.gao',
     author_email='373251686@qq.com',
     url='https://github.com/poppyred/python-consul2',
@@ -54,7 +54,11 @@ setup(
         open('CHANGELOG.rst').read()
     ),
     py_modules=py_modules,
-    install_requires=requirements,
+    install_requires=[
+        'requests',
+        'six >= 1.4',
+        'aiohttp >= 3.8.3',
+    ],
     extras_require={
         'tornado': ['tornado'],
         'asyncio': ['aiohttp'],
